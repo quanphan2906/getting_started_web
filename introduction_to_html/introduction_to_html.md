@@ -4,9 +4,16 @@
 
 HTML miêu tả cấu trúc của một trang web bằng nhiều `elements`. Các `elements` sẽ cho browser biết đâu là `heading`, đâu là `paragraph`, đâu là `link`.
 
-Một đoạn HTML đơn giản từ [w3schools](https://www.w3schools.com/html/html_intro.asp):
-
-![Simple HTML Code](./simple_html.png)
+    <!DOCTYPE html>
+        <html>
+            <head>
+                <title>Page Title</title>
+            </head>
+        <body>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+        </body>
+    </html>
 
 ### Giải thích ví dụ trên
 

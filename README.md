@@ -2,5 +2,5 @@
 
 ## Mục lục
 
-[Introduction](./introduction/introduction.md)
-[Introduction to HTML](./introduction_to_html/introduction_to_html.md)
+1. [Introduction](./introduction/introduction.md)
+2. [Introduction to HTML](./introduction_to_html/introduction_to_html.md)
