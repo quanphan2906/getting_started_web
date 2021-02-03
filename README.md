@@ -2,5 +2,4 @@
 
 ## Mục lục
 
-1. [Introduction](./introduction/introduction.md)
-2. [Introduction to HTML](./introduction_to_html/introduction_to_html.md)
+1. [Giới thiệu chung về HTML và CSS](./introduction/introduction.md)
