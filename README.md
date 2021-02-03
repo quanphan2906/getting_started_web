@@ -2,4 +2,4 @@
 
 ## Mục lục
 
-[Introduction][./introduction]
+[Introduction](./introduction)
