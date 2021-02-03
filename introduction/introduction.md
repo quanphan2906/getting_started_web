@@ -64,11 +64,11 @@ Lưu ý:
 -   Một số HTML element không có nội dung bên trong cũng không có tag kết thúc (ví dụ tag `<br>`)
 -   Nội dung bên trong của một HTML Element có thể là một HTML element khác. Chẳng hạn, nội dung của tag `<head>` có element `<title>Page Title</title>`.
 
-### HTML attributes
+Trong HTML có nhiều loại tag khác nhau. Mỗi tag đánh dấu một loại văn bản nhất định. Ví dụ như các tag `h1` đến `h6` đánh dấu các headings, `p` đánh dấu paragraph, `img` đánh dấu hình ảnh, `video` đánh dấu video, etc.
 
 ### Viết HTML ở đâu và "chạy" file HTML như thế nào?
 
-Có nhiều phần mềm ta có thể dùng để viết và "chạy" HTML.
+Ta sẽ viết HTML vào một text editor bất kỳ, lưu lại với định dạng đuôi .html, sau đó nhấp đúp file đó để mở lên bằng một browser bất kỳ. Một trong những text editor ta có thể dùng là Notepad.
 
 #### Notepad
 
@@ -88,9 +88,14 @@ Ta sẽ thấy được kết quả như ban đầu:
 
 ![](./result.png)
 
+Nếu như ta muốn mở file bằng Notepad để chỉnh sửa code HTML, ta có hai cách:
+
+1. Nhấp chuột phải vào file. Chọn Open with Notepad
+2. Mở Notepad lên. Vào File, Open. Chọn file index.html để mở
+
 #### Các text editors khác
 
-Có nhiều text editors offline và online khác như Visual Studio Code, Atom, Sublime Text, Codepen etc. Trong tutorial này chúng ta sẽ dùng [CodeSandbox](https://codesandbox.io/).
+Có nhiều text editors offline và online khác mà ta có thể dùng để viết HTML như Visual Studio Code, Atom, Sublime Text, Codepen etc. Đối với các offline editors thì cách "chạy" file HTML cũng tương tự như với Notepad. Tuy nhiên, trong tutorial này chúng ta sẽ dùng một online editor là [CodeSandbox](https://codesandbox.io/).
 
 Giao diện trang web như sau:
 
@@ -110,7 +115,39 @@ Ta sẽ được dẫn tới trang bên dưới:
 
 ![Static sandbox](./static_codesandbox_2.png)
 
-Codesandbox đã viết sẵn cho chúng ta một starter template. Chúng ta sẽ dùng template này chứ không code lại từ đầu như trên Notepad nữa. Trong template này chúng ta vẫn thấy các elements quen thuộc đã được nhắc đến như, `<!DOCTYPE html>`, `<head>`, `<title>`, `<body>`, `<h1>`. Có một số elements mới như `<meta>`, nhưng tạm thời ta chưa cần quan tâm.
+Trang này bao gồm 3 vùng chính: vùng chứa danh sách các files, vùng chứa code, và vùng preview kết quả.
+
+Codesandbox đã viết sẵn cho chúng ta một starter template ở vùng chứa code. Chúng ta sẽ dùng template này chứ không code lại từ đầu như trên Notepad nữa. Trong template này chúng ta vẫn thấy các elements quen thuộc đã được nhắc đến như `<!DOCTYPE html>`, `<head>`, `<title>`, `<body>`, `<h1>`. Có một số elements mới như `<meta>`, nhưng tạm thời ta chưa cần quan tâm.
+
+Tuy nhiên, chúng ta để ý thấy trong tag `<head>` lại có thêm code "lạ": `lang=en`. Đó, ta gọi là HTML attributes.
+
+### HTML attributes
+
+Mọi HTML elements đều có thể có attributes. HTML attributes được viết ở tag mở đầu của element, cung cấp cho browser thêm thông tin về element ấy.
+
+Một element có thể có một hoặc nhiều attributes. Các attributes thường xuất hiện dưới dạng: `[name]=[value]`.
+
+Ví dụ chúng ta có thể các attributes `src`, `width`, `height` cho tag `img` như sau:
+
+```html
+<img
+    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
+    width="500"
+    height="600"
+    alt="Puppy image"
+/>
+```
+
+Trong đó
+
+-   Attribute `src` có giá trị là URL của ảnh. URL này có thể là absolute URL (giống như ở trong ví dụ) hoặc relative URL. Trong phạm vi tutorial này, chúng ta chỉ quan tâm absolute URL. Absolute URL là URL của một bức ảnh được host trên một website khác.
+-   Attribute `width` có giá trị là độ rộng của bức ảnh được tính theo đơn vị pixel (px).
+-   Attribute `height` có giá trị là chiều cao của bức ảnh được tính theo đơn vị pixel (px).
+-   Attribute `alt` có giá trị là một dòng text. Dòng text này sẽ xuất hiện nếu không may, vì một lý do gì đấy, ảnh không load lên được.
+
+Đối với một element, có những attributes là bắt buộc phải có, có những attributes không nhất thiết phải có. Ví dụ như với tag `img`, attribute `src` bắt buộc phải có, `width`, `height` và `alt` là không bắt buộc. Hoặc như với tag `html`, attribute `lang` không bắt buộc phải xuất hiện. Nó chỉ có tác dụng nói cho browser biết ngôn ngữ chính của trang web là gì (ở đây là `en` - English).
+
+Để biết một element có những attributes nào, những attributes nào là bắt buộc, những attributes nào không, chúng ta có thể hỏi Google!
 
 ## CSS
 
@@ -129,21 +166,26 @@ p {
 }
 ```
 
+Nếu như ta "nhúng" file CSS này vào trang HTML (cách "nhúng" sẽ được đề cập sau) thì toàn bộ elements `h1` sẽ có màu (`color`) đen, có font chữ (`font-size`) 14 px, toàn bộ elements p sẽ có độ đậm (`opacity`) bằng 85% độ đậm mặc định.
+
 ### CSS format
 
 Mỗi khai báo CSS có một selector và một khối declaration:
 
 ![CSS syntax](./css_syntax.png)
+
 Nguồn: [w3schools.com](https://www.w3schools.com/css/css_syntax.asp)
 
--   Mỗi khai báo CSS có một hoặc nhiều declaration, mỗi declaration tách nhau bằng dấu chấm phẩy
+-   Mỗi khai báo CSS có một hoặc nhiều declaration, mỗi declaration tách nhau bằng dấu chấm phẩy. Mỗi declaration nên nằm trên một dòng riêng biệt để dễ đọc (mặc dù không bắt buộc).
 -   Mỗi declaration có property và value, cách nhau bởi dấu hai chấm
 -   Mỗi khối declaration được bọc bởi cặp dấu ngoặc nhọn
 
 Trong ví dụ ban đầu:
 
--   `h1` và `p` là selectors
+-   `h1` và `p` là selectors. Selector sẽ báo cho browser biết là những CSS declarations chứa trong cặp dấu ngoặc nhọn ngay sau nó sẽ được áp dụng cho những elements nào.
 -   `color: black`, `font-size: 14px` và `opacity: 85%` là các declarations. Trong đó:
 
-    -   `color`, `font-size`, `opacity` là property
-    -   `black`, `14px`, `85%` là values
+    -   `color`, `font-size`, `opacity` là các propertíes
+    -   `black`, `14px`, `85%` là các values
+
+### "Nhúng" file CSS vào HTML như thế nào?
