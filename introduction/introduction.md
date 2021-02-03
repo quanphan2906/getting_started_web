@@ -1,6 +1,6 @@
 # BASIC WEB DEV - HTML/CSS
 
-## Introduction
+## Giới thiệu chung
 
 HTML (Hypertext Markup Language) không phải là ngôn ngữ lập trình, mà chỉ là ngôn ngữ đánh dấu dùng để tạo và cấu trúc các thành phần trong một trang web.
 
