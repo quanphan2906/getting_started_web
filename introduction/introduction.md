@@ -49,7 +49,7 @@ Một đoạn HTML đơn giản:
 
 ### Viết HTML ở đâu và "chạy" file HTML như thế nào?
 
-Ta sẽ viết HTML vào một text editor bất kỳ, lưu lại với định dạng đuôi .html, sau đó nhấp đúp file đó để mở lên bằng một browser bất kỳ. Một trong những text editor ta có thể dùng là Notepad.
+Ta sẽ dùng một text editor bất kỳ để viết HTML vào một file, lưu lại với định dạng đuôi .html, sau đó nhấp đúp file đó để mở lên bằng một browser bất kỳ. Một trong những text editor ta có thể dùng là Notepad.
 
 #### Notepad
 
@@ -127,7 +127,7 @@ Mọi HTML elements đều có thể có attributes. HTML attributes được vi
 
 Một element có thể có một hoặc nhiều attributes. Các attributes thường xuất hiện dưới dạng: `[name]=[value]`.
 
-Ví dụ chúng ta có thể các attributes `src`, `width`, `height` cho tag `img` như sau:
+Ví dụ chúng ta có thể các attributes `src`, `width`, `height` và `alt` cho tag `img` như sau:
 
 ```html
 <img
@@ -145,7 +145,7 @@ Trong đó
 -   Attribute `height` có giá trị là chiều cao của bức ảnh được tính theo đơn vị pixel (px).
 -   Attribute `alt` có giá trị là một dòng text. Dòng text này sẽ xuất hiện nếu không may, vì một lý do gì đấy, ảnh không load lên được.
 
-Đối với một element, có những attributes là bắt buộc phải có, có những attributes không nhất thiết phải có. Ví dụ như với tag `img`, attribute `src` bắt buộc phải có, `width`, `height` và `alt` là không bắt buộc. Hoặc như với tag `html`, attribute `lang` không bắt buộc phải xuất hiện. Nó chỉ có tác dụng nói cho browser biết ngôn ngữ chính của trang web là gì (ở đây là `en` - English).
+Đối với một element, có những attributes là bắt buộc phải có, có những attributes không nhất thiết phải có. Ví dụ như với tag `img`, attribute `src` bắt buộc phải có, `width`, `height` và `alt` là không bắt buộc.
 
 Để biết một element có những attributes nào, những attributes nào là bắt buộc, những attributes nào không, chúng ta có thể hỏi Google!
 
@@ -166,29 +166,11 @@ p {
 }
 ```
 
-Nếu như ta "nhúng" file CSS này vào trang HTML (cách "nhúng" sẽ được đề cập sau) thì toàn bộ elements `h1` sẽ có màu (`color`) đen, có font chữ (`font-size`) 14 px, toàn bộ elements p sẽ có độ đậm (`opacity`) bằng 85% độ đậm mặc định.
+Nếu như ta "nhúng" CSS này vào trang HTML thì toàn bộ elements `h1` sẽ có màu (`color`) đen, có font chữ (`font-size`) 14 px, toàn bộ elements p sẽ có độ đậm (`opacity`) bằng 85% độ đậm mặc định.
 
-### CSS format
+### "Nhúng" CSS vào HTML như thế nào?
 
-Mỗi khai báo CSS có một selector và một khối declaration:
-
-![CSS syntax](./css_syntax.png)
-
-Nguồn: [w3schools.com](https://www.w3schools.com/css/css_syntax.asp)
-
--   Mỗi khai báo CSS có một hoặc nhiều declaration, mỗi declaration tách nhau bằng dấu chấm phẩy. Mỗi declaration nên nằm trên một dòng riêng biệt để dễ đọc (mặc dù không bắt buộc).
--   Mỗi declaration có property và value, cách nhau bởi dấu hai chấm
--   Mỗi khối declaration được bọc bởi cặp dấu ngoặc nhọn
-
-Trong ví dụ ban đầu:
-
--   `h1` và `p` là selectors. Selector sẽ báo cho browser biết là những CSS declarations chứa trong cặp dấu ngoặc nhọn ngay sau nó sẽ được áp dụng cho những elements nào.
--   `color: black`, `font-size: 14px` và `opacity: 85%` là các declarations. Trong đó:
-
-    -   `color`, `font-size`, `opacity` là các propertíes
-    -   `black`, `14px`, `85%` là các values
-
-### "Nhúng" file CSS vào HTML như thế nào?
+Ta sẽ dùng một text editor bất kỳ viết CSS vào một file, lưu lại với định dạng đuôi .css, sau đó liên kết file CSS với HTML.
 
 Đầu tiên ta sẽ tạo file CSS trên Codesandbox. Nhấp vào biểu tượng New File:
 
@@ -213,6 +195,32 @@ Như vậy là bạn đã kết nối được file CSS với file HTML rồi đ
 
 ![Link to CSS](./link_to_css.png)
 
-Tag `link` dùng để "nhúng" CSS vào HTML. Tag `link` có những attributes sau cần quan tâm:
+"Nhúng" CSS vào HTML là một trong những công dụng của tag `link`. Tag `link` có những attributes sau cần quan tâm:
 
--   `rel` (bắt buộc):
+-   `rel` (bắt buộc): cho browser biết mối quan hệ giữa file hiện hành và file được link. Trong trường hợp này, `rel` mang giá trị `stylesheet`, nghĩa là file được link sẽ định dạng style cho file hiện hành.
+-   `type`: cho browser biết định dạng của file được link
+-   `href`: đường link đến file ấy.
+
+Như vậy đó là cách "nhúng" CSS vào HTML. Bây giờ chúng ta sẽ tìm hiểu sâu hơn về cách viết CSS.
+
+### CSS syntax
+
+Mỗi khai báo CSS có một selector và một khối declaration:
+
+![CSS syntax](./css_syntax.png)
+
+Nguồn: [w3schools.com](https://www.w3schools.com/css/css_syntax.asp)
+
+-   Mỗi khai báo CSS có một hoặc nhiều declaration, mỗi declaration tách nhau bằng dấu chấm phẩy. Mỗi declaration nên nằm trên một dòng riêng biệt để dễ đọc (mặc dù không bắt buộc).
+-   Mỗi declaration có property và value, cách nhau bởi dấu hai chấm
+-   Mỗi khối declaration được bọc bởi cặp dấu ngoặc nhọn
+
+Trong ví dụ ban đầu:
+
+-   `h1` và `p` là selectors. Selector sẽ báo cho browser biết là những CSS declarations chứa trong cặp dấu ngoặc nhọn ngay sau nó sẽ được áp dụng cho những elements nào.
+-   `color: black`, `font-size: 14px` và `opacity: 85%` là các declarations. Trong đó:
+
+    -   `color`, `font-size`, `opacity` là các propertíes
+    -   `black`, `14px`, `85%` là các values
+
+Để biết xem một element có thể được style bằng những properties nào, ta có thể hỏi Google.
