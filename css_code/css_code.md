@@ -15,8 +15,8 @@ Cách yêu cầu đặt ra cho CSS là:
 2.  Sub-title nhỏ hơn và nhạt hơn title
 3.  Paragraph nhỏ hơn và nhạt hơn subtitle
 4.  Nút nhấn đã thay đổi style hoàn toàn
-5.  4 góc của bức ảnh đã được bo tròn. Giữa nút nhấn và tấm ảnh có một khoảng trống.
-6.  Toàn bộ văn bản chỉ chiếm 50% độ rộng trang web, và được canh giữa
+5.  4 góc của bức ảnh đã được bo tròn. Giữa nút nhấn và tấm ảnh có một khoảng trống
+6.  Nội dung chỉ chiếm 50% độ rộng trang web, và các title, subtitle, paragraph, button, img đều được canh giữa
 
 Ta sẽ lần lượt đi xử lý hết các yêu cầu trên.
 
@@ -128,7 +128,7 @@ button {
 
 ### Ảnh
 
-Viết tiếp vào `index.css`:
+Để thay đổi style của element `img`, viết tiếp vào `index.css`:
 
 ```css
 img {
@@ -140,30 +140,31 @@ img {
 
 -   Tăng giãn cách giữa button và ảnh (lên thành 3em): `margin-top: 3em`
 -   Bo tròn góc ảnh: `border-radius: 4px`
--   Làm cho ảnh rộng bằng độ rộng của tag `div`: `width: 100%`
+-   Làm cho ảnh rộng bằng độ rộng của element `div`: `width: 100%` (element `div` là cha của element `img`)
 
 ### Toàn bộ văn bản
 
-Quay lại tag `body`, thêm vào:
-
-```css
-body {
-    font-family: "Courier New";
-    /* Phần thêm vào */
-    display: flex;
-    justify-content: center;
-    /* Phần thêm vào */
-}
-```
-
-Phần thêm vào bên trên sẽ giúp ta canh giữa toàn bộ văn bản. Đọc thêm về [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
-
-Cuối cùng để toàn bộ văn bản chỉ chiếm 50% độ rộng màn hình, và nội dung được canh giữa, ta viết thêm vào file `index.css`:
+Độ rộng của element `body` đang chiếm trọn độ rộng của màn hình. Vì vậy, muốn phần nội dung của chúng ta chỉ chiếm 50% màn hình, ta viết thêm vào file `index.css`:
 
 ```css
 div {
     width: 50%;
     text-align: center;
+}
+```
+
+-   Độ rộng của element `div` chỉ chiếm 50% độ rộng của element `body`: `width: 50%` (element `div` là cha của element `img`)
+-   Canh giữa cho tất cả các dòng: `text-align: center`. (Các giá trị khác của `text-align` gồm `left`, `right` và `justify`)
+
+Cuối cùng, để nội dung nằm chính giữa màn hình, ta sẽ dùng kỹ thuật Flexbox trong CSS (Đọc thêm về [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+Ta viết thêm styles vào khối CSS declaration của element `body`:
+
+```css
+body {
+    font-family: "Courier New";
+    display: flex; /* Phần thêm vào */
+    justify-content: center; /* Phần thêm vào */
 }
 ```
 
