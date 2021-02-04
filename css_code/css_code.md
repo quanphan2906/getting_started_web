@@ -9,7 +9,7 @@ Trước khi bắt tay vào viết CSS, ta cũng cần phải phân tích thiế
 ![HTML without CSS](html_without_css.png)
 ![HTML with CSS](html_with_css.png)
 
-Cách yêu cầu đặt ra cho CSS là:
+Các yêu cầu đặt ra cho CSS là:
 
 1.  Font chữ không phải là Times New Roman mà là Courier New. Tuy nhiên mọi người có thể dùng font chữ gì tuỳ thích.
 2.  Sub-title nhỏ hơn và nhạt hơn title
@@ -156,7 +156,7 @@ div {
 -   Độ rộng của element `div` chỉ chiếm 50% độ rộng của element `body`: `width: 50%` (element `div` là cha của element `img`)
 -   Canh giữa cho tất cả các dòng: `text-align: center`. (Các giá trị khác của `text-align` gồm `left`, `right` và `justify`)
 
-Cuối cùng, để nội dung nằm chính giữa màn hình, ta sẽ dùng kỹ thuật Flexbox trong CSS (Đọc thêm về [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+Cuối cùng, để nội dung nằm chính giữa màn hình, ta sẽ dùng kỹ thuật Flexbox trong CSS (Đọc thêm về [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
 
 Ta viết thêm styles vào khối CSS declaration của element `body`:
 
@@ -167,6 +167,8 @@ body {
     justify-content: center; /* Phần thêm vào */
 }
 ```
+
+Như vậy là ta đã hoàn thành toàn bộ trang web rồi!
 
 [Toàn bộ file CSS](../src/index.css)
 
