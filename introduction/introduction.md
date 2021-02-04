@@ -47,25 +47,6 @@ Một đoạn HTML đơn giản:
 -   `Element` `<h1>` đánh dấu phần chữ bên trong nó là `heading` lớn nhất. (Trong html có 6 kích cỡ `heading`, được đánh dấu từ `h1` là lớn nhất đến `h6` là nhỏ nhất. Sẽ đề cập sâu hơn sau.)
 -   `Element` `<p>` đánh dấu phần chữ bên trong nó là một `paragraph`.
 
-### Vậy HTML Element là gì?
-
-Một HTML element bao gồm tag mở đầu, nội dung bên trong, và tag kết thúc. Một HTML element thường sẽ có syntax như sau:
-
-`<[tên tag]> [Nội dung] </[tên tag]>`
-
-Ví dụ như:
-
--   `<h1> First heading </h1> `
--   `<p> Paragraph </p> `
-
-Lưu ý:
-
--   Cần phân biệt tag với element. Element bao gồm tag lẫn nội dung bên trong.
--   Một số HTML element không có nội dung bên trong cũng không có tag kết thúc (ví dụ tag `<br>`)
--   Nội dung bên trong của một HTML Element có thể là một HTML element khác. Chẳng hạn, nội dung của tag `<head>` có element `<title>Page Title</title>`.
-
-Trong HTML có nhiều loại tag khác nhau. Mỗi tag đánh dấu một loại văn bản nhất định. Ví dụ như các tag `h1` đến `h6` đánh dấu các headings, `p` đánh dấu paragraph, `img` đánh dấu hình ảnh, `video` đánh dấu video, etc.
-
 ### Viết HTML ở đâu và "chạy" file HTML như thế nào?
 
 Ta sẽ viết HTML vào một text editor bất kỳ, lưu lại với định dạng đuôi .html, sau đó nhấp đúp file đó để mở lên bằng một browser bất kỳ. Một trong những text editor ta có thể dùng là Notepad.
@@ -117,9 +98,28 @@ Ta sẽ được dẫn tới trang bên dưới:
 
 Trang này bao gồm 3 vùng chính: vùng chứa danh sách các files, vùng chứa code, và vùng preview kết quả.
 
-Codesandbox đã viết sẵn cho chúng ta một starter template ở vùng chứa code. Chúng ta sẽ dùng template này chứ không code lại từ đầu như trên Notepad nữa. Trong template này chúng ta vẫn thấy các elements quen thuộc đã được nhắc đến như `<!DOCTYPE html>`, `<head>`, `<title>`, `<body>`, `<h1>`. Có một số elements mới như `<meta>`, nhưng tạm thời ta chưa cần quan tâm.
+Codesandbox đã viết sẵn cho chúng ta một starter template ở vùng chứa code. Để tạo ra sản phẩm cuối cùng trong tutorial này, chúng ta sẽ viết thêm HTML vào starter template này trong những bài sau.
 
-Tuy nhiên, chúng ta để ý thấy trong tag `<head>` lại có thêm code "lạ": `lang=en`. Đó, ta gọi là HTML attributes.
+Bây giờ chúng ta hãy đi tìm hiểu về những khái niệm quan trọng trong HTML.
+
+### Vậy HTML Element là gì?
+
+Một HTML element bao gồm tag mở đầu, nội dung bên trong, và tag kết thúc. Một HTML element thường sẽ có syntax như sau:
+
+`<[tên tag]> [Nội dung] </[tên tag]>`
+
+Ví dụ như:
+
+-   `<h1> First heading </h1> `
+-   `<p> Paragraph </p> `
+
+Lưu ý:
+
+-   Cần phân biệt tag với element. Element bao gồm tag lẫn nội dung bên trong.
+-   Một số HTML element không có nội dung bên trong cũng không có tag kết thúc (ví dụ tag `<br>`)
+-   Nội dung bên trong của một HTML Element có thể là một HTML element khác. Chẳng hạn, nội dung của tag `<head>` có element `<title>Page Title</title>`.
+
+Trong HTML có nhiều loại tag khác nhau. Mỗi tag đánh dấu một loại văn bản nhất định. Ví dụ như các tag `h1` đến `h6` đánh dấu các headings, `p` đánh dấu paragraph, `img` đánh dấu hình ảnh, `video` đánh dấu video, etc.
 
 ### HTML attributes
 
@@ -189,3 +189,30 @@ Trong ví dụ ban đầu:
     -   `black`, `14px`, `85%` là các values
 
 ### "Nhúng" file CSS vào HTML như thế nào?
+
+Đầu tiên ta sẽ tạo file CSS trên Codesandbox. Nhấp vào biểu tượng New File:
+
+![New file Codesandbox](./new_file_codesandbox.png)
+
+Đặt tên tuỳ ý. Trong tutorial này mình sẽ đặt là `index.css`. Ta sẽ định dạng cho mọi element `h1` đều sẽ có chữ màu đỏ và font chữ 20px. Để làm được như vậy, hãy viết những dòng sau vào `index.css`:
+
+```css
+h1 {
+    color: red;
+    font-size: 20px;
+}
+```
+
+Qua file `index.html`, viết dòng code sau vào ngay dưới element `title`:
+
+```html
+<link rel="stylesheet" type="text/css" href="index.css" />
+```
+
+Như vậy là bạn đã kết nối được file CSS với file HTML rồi đấy. Toàn bộ styles trong CSS sẽ được áp dụng cho trang HTML. Cùng xem giao diện của chúng ta lúc này nào:
+
+![Link to CSS](./link_to_css.png)
+
+Tag `link` dùng để "nhúng" CSS vào HTML. Tag `link` có những attributes sau cần quan tâm:
+
+-   `rel` (bắt buộc):
