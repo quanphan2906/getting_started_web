@@ -168,7 +168,7 @@ p {
 }
 ```
 
-Nếu như ta "nhúng" CSS này vào trang HTML thì toàn bộ elements `h1` sẽ có màu (`color`) đen, có font chữ (`font-size`) 14 px, toàn bộ elements p sẽ có độ đậm (`opacity`) bằng 85% độ đậm mặc định.
+Nếu như ta "nhúng" CSS này vào trang HTML thì toàn bộ elements `h1` sẽ có màu (`color`) đen, có font chữ (`font-size`) 14 px (px là một loại đơn vị độ dài trong CSS, còn nhiều loại đơn vị khác sẽ đề cập ở phần sau), toàn bộ elements p sẽ có độ đậm (`opacity`) bằng 85% độ đậm mặc định.
 
 ### "Nhúng" CSS vào HTML như thế nào?
 

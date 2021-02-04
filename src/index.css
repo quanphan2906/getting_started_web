@@ -1,6 +1,5 @@
 body {
-    font-family: "Courier New", Courier, monospace;
-    text-align: center;
+    font-family: "Courier New";
     display: flex;
     justify-content: center;
 }
@@ -16,8 +15,8 @@ h2 {
 }
 
 p {
-    font-size: 0.9rem;
     opacity: 85%;
+    font-size: 0.9rem;
 }
 
 button {

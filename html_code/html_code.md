@@ -40,7 +40,10 @@ Viết những dòng sau vào bên trong element `body` (thêm vào sau tag `<bo
 
 Để lấy link ảnh, bạn vào link này: [Lorem picsum](https://picsum.photos/)
 
-Trong đoạn code HTML trên, ta thấy tag `div` là chưa được nhắc đến. Thẻ div dùng để gom nhóm một số elements trên HTML thành một nhóm. Việc gom nhóm như thế này sẽ tiện cho việc style bên CSS. Cụ thể mình sẽ đề cập khi qua phần CSS. Vì trang web của chúng ta nhỏ gọn, nên chúng ta sẽ gom tất cả phần tử lại thành một nhóm duy nhất.
+Trong đoạn code HTML trên, ta thấy tag `div` là chưa được nhắc đến trong bài trước. Thẻ div dùng để gom nhóm một số elements trên HTML thành một nhóm. Việc gom nhóm sẽ tiện cho việc style bên CSS. Cụ thể mình sẽ đề cập khi qua phần CSS. Vì trang web của chúng ta nhỏ gọn, nên chúng ta chỉ cần gom tất cả phần tử lại thành một nhóm duy nhất.
+
+[Toàn bộ file HTML](../src/index.html)
 
 Bài trước: [Giới thiệu chung về HTML và CSS](introduction/introduction.md)
+
 Bài tiếp theo: [Thêm CSS cho trang web](css_code/css_code.md)
