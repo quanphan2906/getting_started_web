@@ -170,4 +170,4 @@ body {
 
 [Toàn bộ file CSS](../src/index.css)
 
-Bài trước: [Viết HTML cho trang web](./html_code/html_code.md)
+Bài trước: [Viết HTML cho trang web](../html_code/html_code.md)

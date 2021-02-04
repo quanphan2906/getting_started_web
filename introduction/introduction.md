@@ -227,4 +227,4 @@ Trong ví dụ ban đầu:
 
 Để biết xem một element có thể được style bằng những properties nào, ta có thể hỏi Google!
 
-Bài tiếp theo: [Viết HTML cho trang web](./html_code/html_code.md)
+Bài tiếp theo: [Viết HTML cho trang web](../html_code/html_code.md)

@@ -44,6 +44,6 @@ Trong đoạn code HTML trên, ta thấy tag `div` là chưa được nhắc đ�
 
 [Toàn bộ file HTML](../src/index.html)
 
-Bài trước: [Giới thiệu chung về HTML và CSS](introduction/introduction.md)
+Bài trước: [Giới thiệu chung về HTML và CSS](../introduction/introduction.md)
 
-Bài tiếp theo: [Thêm CSS cho trang web](css_code/css_code.md)
+Bài tiếp theo: [Thêm CSS cho trang web](../css_code/css_code.md)
