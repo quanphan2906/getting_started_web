@@ -1,4 +1,4 @@
-# BASIC WEB DEV - HTML/CSS
+# Basic Web - HTML/CSS
 
 ## Giới thiệu chung
 
@@ -119,7 +119,9 @@ Lưu ý:
 -   Một số HTML element không có nội dung bên trong cũng không có tag kết thúc (ví dụ tag `<br>`)
 -   Nội dung bên trong của một HTML Element có thể là một HTML element khác. Chẳng hạn, nội dung của tag `<head>` có element `<title>Page Title</title>`.
 
-Trong HTML có nhiều loại tag khác nhau. Mỗi tag đánh dấu một loại văn bản nhất định. Ví dụ như các tag `h1` đến `h6` đánh dấu các headings, `p` đánh dấu paragraph, `img` đánh dấu hình ảnh, `video` đánh dấu video, etc.
+Trong HTML có nhiều loại tag khác nhau. Mỗi tag đánh dấu một loại tài nguyên nhất định. Ví dụ như các tag `h1` đến `h6` đánh dấu các headings, `p` đánh dấu paragraph, `img` đánh dấu hình ảnh, `video` đánh dấu video, etc.
+
+Để biết xem với một loại tài nguyên nhất định, ta nên dùng tag nào thì hoặc là hỏi Google hoặc là dựa vào kinh nghiệm lập trình!
 
 ### HTML attributes
 
@@ -223,4 +225,6 @@ Trong ví dụ ban đầu:
     -   `color`, `font-size`, `opacity` là các propertíes
     -   `black`, `14px`, `85%` là các values
 
-Để biết xem một element có thể được style bằng những properties nào, ta có thể hỏi Google.
+Để biết xem một element có thể được style bằng những properties nào, ta có thể hỏi Google!
+
+Bài tiếp theo: [Viết HTML cho trang web](./html_code/html_code.md)
